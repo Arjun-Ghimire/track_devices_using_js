@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting you to offer</title>
+    <style>
+        div{
+            margin-top: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="loading.gif" width="auto" height="auto" alt="">
+    </div>
+    <script>
+        if (navigator.userAgent.indexOf("Win") != -1){
+            console.log("this is win");
+           window.location.replace("http://www.w3schools.com");
+        }
+
+        else if (navigator.userAgent.indexOf("Mac") != -1) {
+            if(navigator.userAgent.includes("iPhone") || navigator.userAgent.includes("iPad")){
+                console.log("Iphone or ipad");
+                window.location.replace("http://www.w3schools.com");
+            }
+            else{
+                console.log("mac");
+                window.location.replace("http://www.w3schools.com");
+            }
+
+        }
+
+        else if(navigator.userAgent.includes("Android")){
+                console.log("this is android");
+                window.location.replace("http://www.w3schools.com");
+        }
+            
+        else{
+            console.log("not sure");
+            window.location.replace("http://www.w3schools.com");
+        }
+
+    </script>
+</body>
+</html>
